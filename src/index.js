@@ -1,5 +1,5 @@
 module.exports = function toReadable (number) {
-  const dictionary0 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', ''];
+const dictionary0 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', ''];
   const dictionary10 = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
   const dictionary20 = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
   const dictionary100 = ['hundred'];
@@ -13,7 +13,7 @@ module.exports = function toReadable (number) {
     return `${
     dictionary0[(number + '')[0]]
   } ${
-      ((number + '')[2] == 0 && (number + '')[2] == 0) ? dictionary100[0]
+      ((number + '')[1] == 0 && (number + '')[2] == 0) ? dictionary100[0]
         : str12numb > 0 && str12numb < 10 ? dictionary100[0] + " " +dictionary0[(number + '')[2]] 
         : str12numb >= 10 && str12numb <= 19 ? dictionary100[0] + " " +dictionary10[str12numb - 10] 
           : (str12numb >= 20 && str12numb <= 99) && (number + '')[2] == 0 ? dictionary100[0] + " " +dictionary20[(number + '')[1]]
